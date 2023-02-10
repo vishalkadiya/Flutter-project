@@ -123,7 +123,9 @@ class CatalogItem extends StatelessWidget {
           children: [
             catalog.name.text.lg.color(MyTheme.blueColor).bold.make(),
             catalog.desc.text.textStyle(context.captionStyle).make(),
-            30.heightBox,
+            const SizedBox(
+              height: 10,
+            ),
             ButtonBar(
               alignment: MainAxisAlignment.spaceBetween,
               // buttonPadding: Vx.mH16,
