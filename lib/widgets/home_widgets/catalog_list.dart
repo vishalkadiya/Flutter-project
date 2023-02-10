@@ -3,7 +3,6 @@ import 'package:flutter_first_project/pages/home_detail.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:flutter_first_project/models/catalog.dart';
 import 'package:flutter_first_project/widgets/themes.dart';
-
 import 'catalog_image.dart';
 
 class CatalogList extends StatelessWidget {
@@ -72,13 +71,13 @@ class CatalogItem extends StatelessWidget {
                     ),
                     shape: MaterialStateProperty.all(StadiumBorder()),
                   ),
-                  child: "Buy".text.make(),
+                  child: "Add to cart".text.make(),
                 )
               ],
             ).pOnly(right: 8)
           ],
         ))
       ],
-    )).white.roundedLg.square(150).make().py16();
+    )).white.roundedLg.square(160).make().py8();
   }
 }

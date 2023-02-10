@@ -1,14 +1,7 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:velocity_x/velocity_x.dart';
-
 import 'package:flutter_first_project/models/catalog.dart';
 import 'package:flutter_first_project/widgets/themes.dart';
-
-import '../widgets/home_widgets/catalog_header.dart';
-import '../widgets/home_widgets/catalog_list.dart';
 
 class DetailPage extends StatelessWidget {
   const DetailPage({Key? key, required this.catalog})
@@ -20,7 +13,9 @@ class DetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+      ),
       backgroundColor: MyTheme.creamColor,
       bottomNavigationBar: Container(
         color: Colors.white,
@@ -39,8 +34,8 @@ class DetailPage extends StatelessWidget {
                 ),
                 shape: MaterialStateProperty.all(StadiumBorder()),
               ),
-              child: "Buy".text.make(),
-            ).wh(100, 50)
+              child: "Add to cart".text.make(),
+            ).wh(130, 50)
           ],
         ).p32(),
       ),
@@ -68,7 +63,7 @@ class DetailPage extends StatelessWidget {
                       height: 10,
                     ),
                   ],
-                ).py64(),
+                ).py64(), // product details ma vetical y axis ne ape che
               ),
             ))
           ],
