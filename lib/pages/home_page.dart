@@ -11,6 +11,7 @@ import 'package:flutter_first_project/models/catalog.dart';
 import 'package:flutter_first_project/widgets/themes.dart';
 import '../widgets/home_widgets/catalog_header.dart';
 import '../widgets/home_widgets/catalog_list.dart';
+import 'package:http/http.dart' as http;
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -23,6 +24,8 @@ class _HomePageState extends State<HomePage> {
   final int days = 40;
 
   final String name = "vishal";
+
+  final url = "https://api.jsonbin.io/b/604dbddb683e7e079c4eefd3";
 
   get decodedData => null;
 
@@ -37,6 +40,12 @@ class _HomePageState extends State<HomePage> {
     // await Future.delayed(Duration(seconds: 2));
     final catalogJson =
         await rootBundle.loadString("assets/files/catalog.json");
+
+    // get data from url
+
+    // final response = await http.get(Uri.parse(url));
+    // final catalogJson = response.body;
+
     final decodedData = jsonDecode(catalogJson);
     var productsData = decodedData["products"];
     // List<Item> list = List.from(productsData)
