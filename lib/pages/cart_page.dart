@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_first_project/models/cart.dart';
 import 'package:flutter_first_project/widgets/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
-
 import '../core/store.dart';
 
 class CartPage extends StatelessWidget {
@@ -43,7 +42,7 @@ class _CartTotal extends StatelessWidget {
                 .xl5
                 .color(context.theme.colorScheme.secondary)
                 .make()
-                .px20(),
+                .p20(),
           ),
           50.widthBox,
           ElevatedButton(
