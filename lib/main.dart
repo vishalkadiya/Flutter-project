@@ -3,10 +3,12 @@ import 'package:flutter_first_project/pages/cart_page.dart';
 import 'package:flutter_first_project/pages/login_page.dart';
 import 'package:flutter_first_project/utils/routes.dart';
 import 'package:flutter_first_project/widgets/themes.dart';
+import 'package:velocity_x/velocity_x.dart';
+import 'core/store.dart';
 import 'pages/home_page.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(VxState(store: MyStore(), child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
